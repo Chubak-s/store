@@ -27,7 +27,7 @@
     <div class="footer-first">
       <div class="description">
         <div class="title">о магазине</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh. Egestas amet consectetur vel vitae aliquam dictum suspendisse. Lobortis eget consequat, tellus et et sed turpis. Pretium quisque vitae, amet, porttitor odio ultricies massa pharetra leo. Et ipsum urna fames in sit mi ultrices nisi, nunc.</p>
+        <p>В магазине Porten вы найдете только высококачественные и роскошные изделия. Каждый аксессуар изготовлен с использованием лучших материалов, таких как натуральная кожа, металл и высокотехнологичные ткани. Комбинация качественного исполнения и изысканного дизайна делает каждый аксессуар уникальным и привлекательным.</p>
       </div>
       <div class="categories">
         <div class="title">категории</div>
@@ -41,7 +41,7 @@
       </div>
       <div class="mailing">
         <div class="title">рассылка</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh.</p>
+        <p>Подпишитесь на нашу рассылку, чтобы быть в курсе последних новостей и получать актуальную информацию.</p>
         <div class="mail-enter-sector">
           <input type="email" name="email" class="email" placeholder="Ваша почта">
           <input type="submit" value="подписаться" class="mail-enter">
@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="footer-second">
-      <p>© 2020 Все права защищены</p>
+      <p>© 2023 Все права защищены</p>
       <div id="info">Porten.info</div>
     </div>
   </div>

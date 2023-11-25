@@ -42,9 +42,6 @@
         <button type="button" class="cart-btn">
           <img src="public/bx_bx-cart.svg" alt="cart">
         </button>
-        <button type="button" class="cart-btn">
-          <img src="public/gridicons_search.svg" alt="search">
-        </button>
       </div>
     </div>
   </div>
