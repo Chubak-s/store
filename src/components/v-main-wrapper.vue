@@ -91,16 +91,16 @@
       <hr class="line">
       <div class="brands-logo">
         <div class="card">
-          <img src="/public/brand-logo.png" alt="logo">
+          <img src="/public/hermes-logo.jpg" alt="logo" class="brand-logo">
         </div>
         <div class="card">
-          <img src="/public/brand-logo.png" alt="logo">
+          <img src="/public/henderson.jpg" alt="logo" class="brand-logo">
         </div>
         <div class="card">
-          <img src="/public/brand-logo.png" alt="logo">
+          <img src="/public/$_57.jpg" alt="logo" class="brand-logo">
         </div>
         <div class="card">
-        <img src="/public/brand-logo.png" alt="logo">
+        <img src="/public/georgio-armani-logo.png" alt="logo" class="brand-logo">
       </div>
       </div>
     </div>
@@ -198,6 +198,7 @@
 }
 .catalog-btn:hover, .collection-btn:hover{
   background-color: #1F1F1F;
+  padding: 14px 30px;
 }
 .collection-btn{
   padding: 12px 28px;
@@ -234,7 +235,7 @@
   font-size: 18px;
   cursor: pointer;
   padding: 5px;
-  width: 200px;
+  width: 210px;
 }
 .card:hover{
   background: #1F1F1F;
@@ -269,5 +270,9 @@
   display: flex;
   width: 100%;
   justify-content: space-around;
+}
+.brand-logo{
+  width: 200px;
+  height: 100px;
 }
 </style>

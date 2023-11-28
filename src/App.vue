@@ -1,22 +1,28 @@
 <script>
 import vMainWrapper from './components/v-main-wrapper.vue'
-import VHeader from "./components/v-header.vue";
-import vFooter from './components/v-footer.vue'
+import vHeader from "./components/v-header.vue";
+import vFooter from './components/v-footer.vue';
+import vCatalog from './components/v-catalog.vue'
 export default {
   name: 'app',
   components: {
-    VHeader,
+    vHeader,
     vMainWrapper,
     vFooter,
+    vCatalog,
   }
 }
 </script>
 
 <template>
   <div id="app">
-    <v-header></v-header>
-    <v-main-wrapper></v-main-wrapper>
-    <v-footer></v-footer>
+    <header>
+      <v-header></v-header>
+    </header>
+    <router-view></router-view>
+    <footer>
+      <v-footer></v-footer>
+    </footer>
   </div>
 </template>
 
