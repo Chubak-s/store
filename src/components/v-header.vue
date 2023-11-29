@@ -1,20 +1,20 @@
 <script>
-  export default {
-    name: 'v-header',
-    components: {
-    },
-    props: {},
-    data(){
-      return {
+export default {
+  name: 'v-header',
+  components: {
+  },
+  props: {},
+  data(){
+    return {
 
-      }
-    },
-    computed:{},
-    methods: {},
-    watch: {},
-    mounted() {
     }
+  },
+  computed:{},
+  methods: {},
+  watch: {},
+  mounted() {
   }
+}
 </script>
 
 <template>
@@ -24,11 +24,11 @@
   <div class="v-header">
     <div class="header-first">
       <div class='information'>
-        <img src='' alt="icon-phone">
+        <img src='public/eva_phone-outline.svg' alt="icon-phone">
         8(929)306-41-68 | Работаем 7 дней в неделю | 9:00 - 18:00
       </div>
       <div class='registration'>
-        <img src="" alt="log-in">
+        <img src="public/ic_sharp-log-in.svg" alt="log-in">
         <p class="log-in">Войти/Регистрация</p>
       </div>
     </div>
@@ -41,7 +41,7 @@
         <p class="block-bar">понравилось</p>
         <p class="block-bar">личный кабинет</p>
         <button type="button" class="cart-btn">
-          <img src="" alt="cart">
+          <img src="public/bx_bx-cart.svg" alt="cart">
         </button>
       </div>
     </div>

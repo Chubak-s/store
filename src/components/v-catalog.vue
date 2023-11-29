@@ -1,33 +1,33 @@
 <script>
-  import VCard from "@/components/v-card.vue";
-  export default {
-    name: 'v-catalog',
-    components: {
-      VCard,
-    },
-    props: {},
-    data() {
-      return {
-        catalog: [
-          {name: 'Armani', img: 'public/model2.png', price: 570000},
-          {name: 'D&G', img: 'public/model3.png', price: 500000},
-          {name: 'D&G', img: 'public/model2.png', price: 570000},
-          {name: 'D&G', img: 'public/model3.png', price: 170000},
-          {name: 'Hermes', img: 'public/model1.png', price: 400},
-          {name: 'D&G', img: 'public/model2.png', price: 100},
-        ]
-      }
-    },
-    computed: {},
-    methods: {
-      sortPrice(){
-        this.catalog.sort((a, b) => a.price - b.price);
-      }
-    },
-    watch: {},
-    mounted() {
-    },
-  }
+import VCard from "@/components/v-card.vue";
+export default {
+  name: 'v-catalog',
+  components: {
+    VCard,
+  },
+  props: {},
+  data() {
+    return {
+      catalog: [
+        {name: 'Armani', img: 'public/model2.png', price: 570000},
+        {name: 'D&G', img: 'public/model3.png', price: 500000},
+        {name: 'D&G', img: 'public/model2.png', price: 570000},
+        {name: 'D&G', img: 'public/model3.png', price: 170000},
+        {name: 'Hermes', img: 'public/model1.png', price: 400},
+        {name: 'D&G', img: 'public/model2.png', price: 100},
+      ]
+    }
+  },
+  computed: {},
+  methods: {
+    sortPrice(){
+      this.catalog.sort((a, b) => a.price - b.price);
+    }
+  },
+  watch: {},
+  mounted() {
+  },
+}
 </script>
 
 <template>

@@ -1,27 +1,27 @@
 <script>
-  export default {
-    name: 'v-main-wrapper',
-    components: {
+export default {
+  name: 'v-main-wrapper',
+  components: {
 
-    },
-    props: {},
-    data(){
-      return {
-        title: 'Main wrapper'
-      }
-    },
-    computed:{
-
-    },
-    methods: {
-
-    },
-    watch: {
-
-    },
-    mounted() {
+  },
+  props: {},
+  data(){
+    return {
+      title: 'Main wrapper'
     }
+  },
+  computed:{
+
+  },
+  methods: {
+
+  },
+  watch: {
+
+  },
+  mounted() {
   }
+}
 </script>
 
 <template>
@@ -100,8 +100,8 @@
           <img src="/public/$_57.jpg" alt="logo" class="brand-logo">
         </div>
         <div class="card">
-        <img src="/public/georgio-armani-logo.png" alt="logo" class="brand-logo">
-      </div>
+          <img src="/public/georgio-armani-logo.png" alt="logo" class="brand-logo">
+        </div>
       </div>
     </div>
   </div>

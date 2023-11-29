@@ -5,7 +5,7 @@ import vHeader from "@/components/v-header.vue";
 import vFooter from "@/components/v-footer.vue";
 const routes = [
     {
-        path: '/onlineAccessoriesStore/',
+        path: '/',
         components: {
             default: vMainWrapper,
             vHeader,

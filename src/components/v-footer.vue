@@ -1,19 +1,19 @@
 <script>
-  export default {
-    name: 'v-footer',
-    components: {},
-    props: {},
-    data(){
-      return {
+export default {
+  name: 'v-footer',
+  components: {},
+  props: {},
+  data(){
+    return {
 
-      }
-    },
-    computed:{},
-    methods: {},
-    watch: {},
-    mounted() {
     }
+  },
+  computed:{},
+  methods: {},
+  watch: {},
+  mounted() {
   }
+}
 </script>
 
 <template>
