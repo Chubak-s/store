@@ -1,7 +1,8 @@
 <script>
   export default {
     name: 'v-header',
-    components: {},
+    components: {
+    },
     props: {},
     data(){
       return {
@@ -23,11 +24,11 @@
   <div class="v-header">
     <div class="header-first">
       <div class='information'>
-        <img src="public/eva_phone-outline.svg" alt="icon-phone">
+        <img src='' alt="icon-phone">
         8(929)306-41-68 | Работаем 7 дней в неделю | 9:00 - 18:00
       </div>
       <div class='registration'>
-        <img src="public/ic_sharp-log-in.svg" alt="log-in">
+        <img src="" alt="log-in">
         <p class="log-in">Войти/Регистрация</p>
       </div>
     </div>
@@ -40,7 +41,7 @@
         <p class="block-bar">понравилось</p>
         <p class="block-bar">личный кабинет</p>
         <button type="button" class="cart-btn">
-          <img src="public/bx_bx-cart.svg" alt="cart">
+          <img src="" alt="cart">
         </button>
       </div>
     </div>
