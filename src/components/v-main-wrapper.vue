@@ -42,25 +42,25 @@ export default {
       <div class="collection-container">
         <div class="title">Сезон 2023/24</div>
         <hr class="line">
-        <div class="cards">
+        <div class="cards" id="new_collection">
           <div class="card">
-            <img src="/public/model2.png" alt="model" class="card-photo">
+            <img src="/watches/model2.png" alt="model" class="card-photo">
             <div class="info">
-              <p>DOLCE&GABBANA 7</p>
+              <p>DOLCE GABBANA 7</p>
               <p>480 000 руб.</p>
             </div>
           </div>
           <div class="card">
-            <img src="/public/model1.png" alt="model" class="card-photo">
+            <img src="/watches/model1.png" alt="model" class="card-photo">
             <div class="info">
-              <p>DOLCE&GABBANA 7</p>
+              <p>DOLCE GABBANA 7</p>
               <p>365 000 руб.</p>
             </div>
           </div>
           <div class="card">
-            <img src="/public/model3.png" alt="model" class="card-photo">
+            <img src="/watches/model3.png" alt="model" class="card-photo">
             <div class="info">
-              <p>DOLCE&GABBANA 7</p>
+              <p>DOLCE GABBANA 7</p>
               <p>520 000 руб.</p>
             </div>
           </div>
@@ -69,7 +69,7 @@ export default {
       <div class="collection-container-photo">
         <p class="title">Новая коллекция</p>
         <hr class="line">
-        <button type="button" class="catalog-btn">Каталог</button>
+        <button type="button" class="catalog-btn"><router-link to="/catalog" style="text-decoration: none; color: #fff">Каталог</router-link></button>
       </div>
     </div>
     <div class="new_collection-sector">
@@ -83,7 +83,7 @@ export default {
           Одним из основных трендов коллекции является использование ярких и насыщенных цветов. Вы найдете аксессуары в ярких оттенках, таких как красный, оранжевый, желтый и синий. Это добавляет яркости и стиля вашему образу.
 
           Коллекция также включает в себя разнообразные аксессуары для мужчин, такие как сумки, кошельки, ремни, очки, шарфы и часы. Они выполнены из премиальных материалов, таких как кожа, замша и металл, что обеспечивает высокое качество и долговечность каждого изделия.</div>
-        <button type="button" class="collection-btn">Посмотреть коллекцию</button>
+        <button type="button" class="collection-btn"><a href="#new_collection" style="text-decoration: none; color: #fff">Посмотреть коллекцию</a></button>
       </div>
     </div>
     <div class="brands">

@@ -18,7 +18,8 @@ const routes = [
             default: vCatalog,
             vHeader,
             vFooter
-        }
+        },
+        props: true,
     }
 ];
 
