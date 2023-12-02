@@ -126,7 +126,6 @@ export default {
   display: inline-flex;
   padding: 10px 20px;
   align-items: center;
-  gap: 10px;
   background: #0F0F0F;
   color: #FFFFFF;
   border: none;
