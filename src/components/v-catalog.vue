@@ -1,11 +1,13 @@
 <script>
 import VCard from "@/components/v-card.vue";
 import VPopup from "@/popup/v-popup.vue";
+import VCart from "@/components/v-cart.vue";
 export default {
   name: 'v-catalog',
   components: {
     VCard,
     VPopup,
+    VCart
   },
   props: {},
   data() {
@@ -41,6 +43,7 @@ export default {
       actualCatalog: null,
       isVisibleModal: false,
       actualItem: {},
+      cart: [],
     }
   },
   computed: {},

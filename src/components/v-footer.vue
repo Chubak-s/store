@@ -9,10 +9,10 @@ export default {
     }
   },
   computed:{},
-  methods: {},
+  methods: {
+  },
   watch: {},
-  mounted() {
-  }
+  mounted(){},
 }
 </script>
 
@@ -32,11 +32,11 @@ export default {
       <div class="categories">
         <div class="title">категории</div>
         <div class="categories-names">
-          <div class="categories-name">часы</div>
-          <div class="categories-name">ремни</div>
-          <div class="categories-name">рюкзаки</div>
-          <div class="categories-name">браслеты</div>
-          <div class="categories-name">очки</div>
+          <div class="categories-name" >часы</div>
+          <div class="categories-name" >ремни</div>
+          <div class="categories-name" >рюкзаки</div>
+          <div class="categories-name" >браслеты</div>
+          <div class="categories-name" >очки</div>
         </div>
       </div>
       <div class="mailing">
@@ -98,7 +98,6 @@ export default {
   display: inline-flex;
   padding: 10px 20px;
   align-items: center;
-  cursor: pointer;
 }
 .mail-enter-sector{
   margin-top: 20px;

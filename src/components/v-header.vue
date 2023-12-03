@@ -41,7 +41,7 @@ export default {
         <p class="block-bar">понравилось</p>
         <p class="block-bar">личный кабинет</p>
         <button type="button" class="cart-btn">
-          <img src="public/bx_bx-cart.svg" alt="cart">
+          <router-link to="/cart"><img src="public/bx_bx-cart.svg" alt="cart"></router-link>
         </button>
       </div>
     </div>

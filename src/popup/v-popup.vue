@@ -12,7 +12,10 @@
     },
     computed:{},
     methods:{
-
+      addToCart(){
+        this.$store.state.cart.push(this.item);
+        console.log(this.$store.state.cart);
+      }
     }
   }
 </script>
@@ -27,7 +30,7 @@
       <div class="category">{{this.item.category}}</div>
       <div class="price">{{this.item.price}} ₽</div>
       <div class="buttons">
-        <div class="addToCart-btn">Добавить в корзину</div>
+        <div class="addToCart-btn" @click="addToCart">Добавить в корзину</div>
         <div class="like-btn"><i class="material-icons like">favorite</i></div>
       </div>
       <div class="info">
@@ -92,6 +95,9 @@ img{
   border: none;
   text-transform: uppercase;
   cursor: pointer;
+}
+.addToCart-btn:active{
+  background: #969696;
 }
 .like-btn{
   color: #EF3A27;

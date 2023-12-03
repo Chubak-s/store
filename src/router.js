@@ -3,6 +3,7 @@ import vMainWrapper from './components/v-main-wrapper.vue'
 import vCatalog from './components/v-catalog.vue'
 import vHeader from "@/components/v-header.vue";
 import vFooter from "@/components/v-footer.vue";
+import vCart from "@/components/v-cart.vue";
 const routes = [
     {
         path: '/',
@@ -20,7 +21,16 @@ const routes = [
             vFooter
         },
         props: true,
-    }
+    },
+    {
+        path: '/cart',
+        components: {
+            default: vCart,
+            vHeader,
+            vFooter
+        },
+        props: true,
+    },
 ];
 
 const router = createRouter({
