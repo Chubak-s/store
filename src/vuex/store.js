@@ -4,6 +4,7 @@ const store = createStore({
     state(){
         return {
             cart: [],
+            liked: [],
         }
     },
     mutations:{

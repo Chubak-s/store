@@ -3,37 +3,65 @@ export default {
   name: 'v-card-cart',
   components: {},
   props: {
-    name: {
-      type: String,
-      required: true
+    item:{
+      type: Object,
+      required: true,
     },
-    img:{
-      type: String,
-      required: true
-    },
-    price:{
-      type: Number,
-      required: true
+    cart:{
+      type: Array,
+      required: true,
     }
   },
   data() {
     return {
+      counter: 0,
     }
   },
   computed: {},
-  methods: {},
+  methods: {
+    add(){
+      this.counter++;
+      this.$store.state.cart.push(this.item);
+    },
+    remove(){
+      this.counter--;
+      for (let i=0; i<this.cart.length; i++){
+        if (this.cart[i]==this.item){
+          this.$store.state.cart.splice(i, 1);
+        }
+      }
+    }
+  },
   watch: {},
   mounted() {
+    for (let i=0; i<this.cart.length; i++){
+      if (this.cart[i]==this.item){
+        this.counter++;
+      }
+    }
   },
 }
 </script>
 
 <template>
   <div class="v-card">
-    <img :src=img alt="model" >
-    <div class="info">
-      <div class="name">{{name}}</div>
-      <div class="price">{{price}} руб.</div>
+    <img :src=this.item.img alt="model" >
+    <div class="left-section">
+      <div class="info">
+        <div class="name">{{this.item.name}}</div>
+        <div class="price">{{this.item.price}} руб.</div>
+      </div>
+      <div class="bottom-section">
+        <div class="count-btn">
+          <div class="btn" @click="remove">-</div>
+          <div class="btn">{{counter}}</div>
+          <div class="btn" @click="add">+</div>
+        </div>
+        <div class="manage-btn">
+          <div class="delete"><i class="material-icons">delete</i></div>
+          <div class="liked"><i class="material-icons like">favorite</i></div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -49,11 +77,12 @@ export default {
 }
 .v-card:hover{
   background: #1F1F1F;
-  padding: 5px;
 }
-.info{
+.left-section{
   width: 100%;
   margin-left: 20px;
+}
+.info{
   color: #FFF;
   font-size: 24px;
   display: flex;
@@ -61,5 +90,30 @@ export default {
 }
 .price{
   text-align: right;
+}
+.bottom-section{
+  display: flex;
+  margin-top: 150px;
+}
+.count-btn{
+  display: flex;
+  font-size: 24px;
+  border: 1px solid #fff;
+  width: 150px;
+  justify-content: space-between;
+}
+.btn{
+  width: 50px;
+  text-align: center;
+  border: 1px solid #fff;
+}
+.manage-btn{
+  display: flex;
+  width: 370px;
+  justify-content: end;
+  column-gap: 20px;
+}
+.delete:active, .liked:active{
+  color: #969696;
 }
 </style>

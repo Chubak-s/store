@@ -9,25 +9,43 @@ export default {
       count: 0,
       sum: 0,
       deliveryCost: 500,
+      counter: {},
+      uniqueCart: [],
     }
   },
   methods:{
   },
+  computed:{
+    summa: function (){
+      this.sum = 0;
+      for (let item in this.cart) {
+        this.sum += this.cart[item].price;
+      }
+      return this.sum;
+    }
+  },
   mounted() {
     this.cart = this.$store.state.cart;
-    console.log(this.cart)
+    console.log(this.cart);
+    this.uniqueCart = this.cart.filter(function(element, index, self) {
+      return index === self.indexOf(element);
+    });
     this.count = this.cart.length;
-    for (let item in this.cart) {
-      this.sum += this.cart[item].price;
+    for (let i = 0; i < this.cart.length; i++) {
+      if (this.counter[this.cart[i]]) {
+        this.counter[this.cart[i]]++;
+      } else {
+        this.counter[this.cart[i]] = 1;
+      }
     }
-  }
+  },
 }
 </script>
 
 <template>
   <div class="v-cart">
     <div class="main-bar">
-      <div class="path hover">Главное/Корзина</div>
+      <router-link to="/" style="text-decoration: none; color: #FFFFFF"><div class="path hover">Главное/Корзина</div></router-link>
       <div class="sort-bar">
         <div class="sort-new hover">по новизне</div>
         <div class="sort-price hover">по цене</div>
@@ -37,8 +55,8 @@ export default {
     <div class="main-section">
       <div class="items">
         <div class="title">Корзина</div>
-        <div v-for="item in cart" :key="item.id" class="cart-section">
-          <VCardCart :name="item.name" :img="item.img" :price="item.price"></VCardCart>
+        <div v-for="item in uniqueCart" :key="item.id" class="cart-section">
+          <VCardCart :item="item" :cart="cart"></VCardCart>
         </div>
       </div>
       <div class="order">
@@ -51,7 +69,7 @@ export default {
             <div class="total">Итого: </div>
           </div>
           <div class="right-section-order">
-            <div class="sum">{{this.sum}} руб.</div>
+            <div class="sum">{{this.summa}} руб.</div>
             <div class="sum">{{this.deliveryCost}} руб.</div>
             <div class="total-sum">{{this.sum+this.deliveryCost}} руб.</div>
           </div>

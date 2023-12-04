@@ -4,6 +4,7 @@ import vCatalog from './components/v-catalog.vue'
 import vHeader from "@/components/v-header.vue";
 import vFooter from "@/components/v-footer.vue";
 import vCart from "@/components/v-cart.vue";
+import vLiked from "@/components/v-liked.vue";
 const routes = [
     {
         path: '/',
@@ -26,6 +27,15 @@ const routes = [
         path: '/cart',
         components: {
             default: vCart,
+            vHeader,
+            vFooter
+        },
+        props: true,
+    },
+    {
+        path: '/liked',
+        components: {
+            default: vLiked,
             vHeader,
             vFooter
         },

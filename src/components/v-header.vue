@@ -38,7 +38,7 @@ export default {
       </div>
       <div class="menu-bar">
         <router-link to="/catalog" style="text-decoration: none; color: #969696"><p class="block-bar">каталог</p></router-link>
-        <p class="block-bar">понравилось</p>
+        <router-link to="/liked" style="text-decoration: none; color: #969696"><p class="block-bar">понравилось</p></router-link>
         <p class="block-bar">личный кабинет</p>
         <button type="button" class="cart-btn">
           <router-link to="/cart"><img src="public/bx_bx-cart.svg" alt="cart"></router-link>
