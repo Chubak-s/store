@@ -24,12 +24,27 @@ export default {
       this.$store.state.cart.push(this.item);
     },
     remove(){
-      this.counter--;
-      for (let i=0; i<this.cart.length; i++){
-        if (this.cart[i]==this.item){
-          this.$store.state.cart.splice(i, 1);
+      if (this.counter>0){
+        this.counter--;
+        for (let i=0; i<this.cart.length; i++){
+          if (this.cart[i]==this.item){
+            this.$store.state.cart.splice(i, 1);
+          }
         }
       }
+    },
+    deleteAll(){
+      while (this.counter!==0){
+        for (let i=0; i<this.cart.length; i++){
+          if (this.cart[i].name===this.item.name){
+            this.$store.state.cart.splice(i, 1);
+          }
+        }
+        this.counter--;
+      }
+    },
+    like(){
+      this.$store.state.liked.push(this.item);
     }
   },
   watch: {},
@@ -58,8 +73,8 @@ export default {
           <div class="btn" @click="add">+</div>
         </div>
         <div class="manage-btn">
-          <div class="delete"><i class="material-icons">delete</i></div>
-          <div class="liked"><i class="material-icons like">favorite</i></div>
+          <div class="delete"><i class="material-icons" @click="deleteAll">delete</i></div>
+          <div class="liked"><i class="material-icons like" @click="like">favorite</i></div>
         </div>
       </div>
     </div>

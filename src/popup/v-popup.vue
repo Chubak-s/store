@@ -17,7 +17,7 @@
       },
       addToLiked(){
         this.$store.state.liked.push(this.item);
-      }
+      },
     }
   }
 </script>
