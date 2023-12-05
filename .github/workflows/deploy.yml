@@ -19,6 +19,12 @@ jobs:
         run: npm ci && npm install material-design-icons-iconfont
       - name: Build project
         run: npm run build
+      - name: Add external module
+        run: |
+          echo 'export default { build: { rollupOptions: { external: ["src/assets/watches/model2.png"] } } }' > vite.config.js  
+          git add vite.config.js  
+          git commit -m "Add external module" || true # Ignore error if there are no changes  
+          git push
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
