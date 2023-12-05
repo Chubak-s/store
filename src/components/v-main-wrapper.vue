@@ -91,16 +91,16 @@ export default {
       <hr class="line">
       <div class="brands-logo">
         <div class="card">
-          <img src="src/assets/hermes-logo.jpg" alt="logo" class="brand-logo">
+          <img src="/src/assets/hermes-logo.jpg" alt="logo" class="brand-logo">
         </div>
         <div class="card">
-          <img src="src/assets/henderson.jpg" alt="logo" class="brand-logo">
+          <img src="/src/assets/henderson.jpg" alt="logo" class="brand-logo">
         </div>
         <div class="card">
-          <img src="src/assets/$_57.jpg" alt="logo" class="brand-logo">
+          <img src="/src/assets/$_57.jpg" alt="logo" class="brand-logo">
         </div>
         <div class="card">
-          <img src="src/assets/georgio-armani-logo.png" alt="logo" class="brand-logo">
+          <img src="/src/assets/georgio-armani-logo.png" alt="logo" class="brand-logo">
         </div>
       </div>
     </div>
@@ -117,7 +117,7 @@ export default {
 .Jumbotron{
   height: 600px;
   width: 100%;
-  background: linear-gradient(0deg, rgba(15, 15, 15, 0.50) 0%, rgba(15, 15, 15, 0.50) 100%), url('src/assets/landing_img.jpg'), lightgray 50%;
+  background: linear-gradient(0deg, rgba(15, 15, 15, 0.50) 0%, rgba(15, 15, 15, 0.50) 100%), url('/src/assets/landing_img.jpg'), lightgray 50%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -163,7 +163,7 @@ export default {
 }
 .collection-container-photo{
   width: 40%;
-  background-image: url('src/assets/new_collection.png');
+  background-image: url('/src/assets/new_collection.png');
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -255,7 +255,7 @@ export default {
 }
 .collection-container-photo-1{
   width: 40%;
-  background-image: url('public/new_collection1.png');
+  background-image: url('/src/assets/new_collection1.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -64,7 +64,7 @@ export default {
   color: #FFFFFF;
 }
 .footer-first{
-  background-image: url('src/assets/footer.png');
+  background-image: url('/src/assets/footer.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
