@@ -1,6 +1,6 @@
 <script>
 import VCard from "@/components/v-card.vue";
-import VPopup from "@/popup/v-popup.vue";
+import VPopup from "@/components/v-popup.vue";
 export default {
   name: 'v-liked',
   components: {

@@ -24,11 +24,11 @@ export default {
   <div class="v-header">
     <div class="header-first">
       <div class='information'>
-        <img src='public/eva_phone-outline.svg' alt="icon-phone">
+        <img src='src/assets/eva_phone-outline.svg' alt="icon-phone">
         8(929)306-41-68 | Работаем 7 дней в неделю | 9:00 - 18:00
       </div>
       <div class='registration'>
-        <img src="public/ic_sharp-log-in.svg" alt="log-in">
+        <img src="src/assets/ic_sharp-log-in.svg" alt="log-in">
         <p class="log-in">Войти/Регистрация</p>
       </div>
     </div>
@@ -41,7 +41,7 @@ export default {
         <router-link to="/liked" style="text-decoration: none; color: #969696"><p class="block-bar">понравилось</p></router-link>
         <p class="block-bar">личный кабинет</p>
         <button type="button" class="cart-btn">
-          <router-link to="/cart"><img src="public/bx_bx-cart.svg" alt="cart"></router-link>
+          <router-link to="/cart"><img src="src/assets/bx_bx-cart.svg" alt="cart"></router-link>
         </button>
       </div>
     </div>

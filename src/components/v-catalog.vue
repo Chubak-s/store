@@ -1,6 +1,6 @@
 <script>
 import VCard from "@/components/v-card.vue";
-import VPopup from "@/popup/v-popup.vue";
+import VPopup from "@/components/v-popup.vue";
 import VCart from "@/components/v-cart.vue";
 export default {
   name: 'v-catalog',
@@ -13,21 +13,21 @@ export default {
   data() {
     return {
       catalog: [
-        {name: 'Phillip Plein black', img: 'public/bracelets/phillip-plein.png', price: 34800, category: 'bracelets', information: 'Состав Гипоаллергенная нержавеющая сталь - 100%; Сезон мульти; Цвет черный; Застежка на замке; Страна производства Китай'},
-        {name: 'Phillip Plein grey', img: 'public/bracelets/pp-white.png', price: 34800, category: 'bracelets', information: 'Состав Гипоаллергенная нержавеющая сталь - 100%; Сезон мульти; Цвет серый; Застежка на замке; Страна производства Китай'},
-        {name: 'Phillip Plein Golden', img: 'public/bracelets/pp-golden.png', price: 34800, category: 'bracelets', information: 'Состав Материал 1: Нержавеющая сталь - 100%; Материал 2: Кристаллы - 100%; Ширина 1.2 см; Длина 22 см; Сезон мульти; Цвет золотой; Застежка на замке; Страна производства Китай'},
-        {name: 'Harmont Blaine', img: 'public/belts/harmont-blaine.png', price: 9000, category: 'belts', information: 'Состав  Натуральная кожа - 100%; Ширина  3 см; Сезон  мульти; Цвет  сний; Узор  однотонный; Цвет фурнитуры  серебряный; Страна производства  Италия'},
-        {name: 'Hugo', img: 'public/belts/hugo.png', price: 8000, category: 'belts', information: 'Состав  Натуральная кожа - 100%; Ширина  3 см; Сезон  мульти; Цвет  черный; Узор  однотонный; Цвет фурнитуры  серебряный; Страна производства  Италия'},
-        {name: 'Etro', img: 'public/belts/etro.png', price: 34000, category: 'belts', information: 'Состав  ПВХ - 100%; Ширина  3.5 см; Сезон  мульти; Цвет  коричневый; Узор  однотонный; Цвет фурнитуры  серебряный; Страна производства  Италия'},
-        {name: 'Piquadro', img: 'public/bugs/piquadro.png', price: 36000, category: 'bugs', information: 'Рюкзак выполнен из плотной ткани на основе полиэстера. Особенности: одно отделение на молнии, внутри один карман на молнии, один карман без застежки, карманы для канцелярии, отсек для ноутбука 14 дюймов, два внешних кармана, два боковых кармана без застежки, уплотненная спинка, регулируемые плечевые ремни.'},
-        {name: 'Igor York', img: 'public/bugs/igor-york.png', price: 28000, category: 'bugs', information: 'Рюкзак из натуральной кожи с клапаном. На спинке карман на молнии, внутри карман на молнии и карман на кнопке. Ремни регулируются. Данный товар является частью проекта Lamoda planet - специального раздела нашего каталога, где мы собрали экологичные, этичные, инклюзивные и благотворительные товары. Товар произведен в стране присутствия Lamoda, что позволяет поддерживать развитие локальных фабрик, мастеров и швей. Покупая этот товар, вы также вносите свой вклад в сокращение углеродного следа.'},
-        {name: 'Guess', img: 'public/bugs/guess.png', price: 14000, category: 'bugs', information: 'Рюкзак выполнен из искусственной кожи. Детали: застежка на молнии, внутри 1 карман на молнии, 1 открытый карман для гаджета, 1 внешний карман на молнии, кармана на молнии, 2 скрытых кармана на молнии в спинке рюкзака, текстильные плечевые ремни, крепление для ручки чемодана.'},
-        {name: 'Armani blue', img: 'public/glasses/armani.png', price: 14000, category: 'glasses'},
-        {name: 'Burberry fashion', img: 'public/glasses/burberry.png', price: 56000, category: 'glasses'},
-        {name: 'Ray-ben classic', img: 'public/glasses/ray-ben.png', price: 18000, category: 'glasses'},
-        {name: 'DG blue', img: 'public/watches/model1.png', price: 230000, category: 'watches'},
-        {name: 'DG red', img: 'public/watches/model2.png', price: 220000, category: 'watches'},
-        {name: 'DG white', img: 'public/watches/model3.png', price: 225000, category: 'watches'},
+        {name: 'Phillip Plein black', img: 'src/assets/bracelets/phillip-plein.png', price: 34800, category: 'bracelets', information: 'Состав Гипоаллергенная нержавеющая сталь - 100%; Сезон мульти; Цвет черный; Застежка на замке; Страна производства Китай'},
+        {name: 'Phillip Plein grey', img: 'src/assets/bracelets/pp-white.png', price: 34800, category: 'bracelets', information: 'Состав Гипоаллергенная нержавеющая сталь - 100%; Сезон мульти; Цвет серый; Застежка на замке; Страна производства Китай'},
+        {name: 'Phillip Plein Golden', img: 'src/assets/bracelets/pp-golden.png', price: 34800, category: 'bracelets', information: 'Состав Материал 1: Нержавеющая сталь - 100%; Материал 2: Кристаллы - 100%; Ширина 1.2 см; Длина 22 см; Сезон мульти; Цвет золотой; Застежка на замке; Страна производства Китай'},
+        {name: 'Harmont Blaine', img: 'src/assets/belts/harmont-blaine.png', price: 9000, category: 'belts', information: 'Состав  Натуральная кожа - 100%; Ширина  3 см; Сезон  мульти; Цвет  сний; Узор  однотонный; Цвет фурнитуры  серебряный; Страна производства  Италия'},
+        {name: 'Hugo', img: 'src/assets/belts/hugo.png', price: 8000, category: 'belts', information: 'Состав  Натуральная кожа - 100%; Ширина  3 см; Сезон  мульти; Цвет  черный; Узор  однотонный; Цвет фурнитуры  серебряный; Страна производства  Италия'},
+        {name: 'Etro', img: 'src/assets/belts/etro.png', price: 34000, category: 'belts', information: 'Состав  ПВХ - 100%; Ширина  3.5 см; Сезон  мульти; Цвет  коричневый; Узор  однотонный; Цвет фурнитуры  серебряный; Страна производства  Италия'},
+        {name: 'Piquadro', img: 'src/assets/bugs/piquadro.png', price: 36000, category: 'bugs', information: 'Рюкзак выполнен из плотной ткани на основе полиэстера. Особенности: одно отделение на молнии, внутри один карман на молнии, один карман без застежки, карманы для канцелярии, отсек для ноутбука 14 дюймов, два внешних кармана, два боковых кармана без застежки, уплотненная спинка, регулируемые плечевые ремни.'},
+        {name: 'Igor York', img: 'src/assets/bugs/igor-york.png', price: 28000, category: 'bugs', information: 'Рюкзак из натуральной кожи с клапаном. На спинке карман на молнии, внутри карман на молнии и карман на кнопке. Ремни регулируются. Данный товар является частью проекта Lamoda planet - специального раздела нашего каталога, где мы собрали экологичные, этичные, инклюзивные и благотворительные товары. Товар произведен в стране присутствия Lamoda, что позволяет поддерживать развитие локальных фабрик, мастеров и швей. Покупая этот товар, вы также вносите свой вклад в сокращение углеродного следа.'},
+        {name: 'Guess', img: 'src/assets/bugs/guess.png', price: 14000, category: 'bugs', information: 'Рюкзак выполнен из искусственной кожи. Детали: застежка на молнии, внутри 1 карман на молнии, 1 открытый карман для гаджета, 1 внешний карман на молнии, кармана на молнии, 2 скрытых кармана на молнии в спинке рюкзака, текстильные плечевые ремни, крепление для ручки чемодана.'},
+        {name: 'Armani blue', img: 'src/assets/glasses/armani.png', price: 14000, category: 'glasses'},
+        {name: 'Burberry fashion', img: 'src/assets/glasses/burberry.png', price: 56000, category: 'glasses'},
+        {name: 'Ray-ben classic', img: 'src/assets/glasses/ray-ben.png', price: 18000, category: 'glasses'},
+        {name: 'DG blue', img: 'src/assets/watches/model1.png', price: 230000, category: 'watches'},
+        {name: 'DG red', img: 'src/assets/watches/model2.png', price: 220000, category: 'watches'},
+        {name: 'DG white', img: 'src/assets/watches/model3.png', price: 225000, category: 'watches'},
       ],
       belts: [],
       bracelets: [],
