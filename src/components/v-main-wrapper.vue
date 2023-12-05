@@ -44,7 +44,7 @@ export default {
         <hr class="line">
         <div class="cards" id="new_collection">
           <div class="card">
-            <img src="src/assets/watches/model2.png" alt="model" class="card-photo">
+            <img src="public/watches/model2.png" alt="model" class="card-photo">
             <div class="info">
               <p>DOLCE GABBANA 7</p>
               <p>480 000 руб.</p>
