@@ -1,28 +1,24 @@
 name: Deploy to GitHub Pages
-
 on:
   push:
     branches:
-      - master
-
+      - main
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: 14
-
+      - name: Install material-design-icons-iconfont
+        run: npm install material-design-icons-iconfont
       - name: Install dependencies
-        run: npm ci
-
+        run: npm ci && npm install material-design-icons-iconfont
       - name: Build project
         run: npm run build
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
