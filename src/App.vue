@@ -2,7 +2,8 @@
 import vMainWrapper from './components/v-main-wrapper.vue'
 import vHeader from "./components/v-header.vue";
 import vFooter from './components/v-footer.vue';
-import vCatalog from './components/v-catalog.vue'
+import vCatalog from './components/v-catalog.vue';
+import VLoginPage from "./components/v-login-page.vue";
 export default {
   name: 'app',
   components: {
@@ -10,6 +11,7 @@ export default {
     vMainWrapper,
     vFooter,
     vCatalog,
+    VLoginPage,
   }
 }
 </script>

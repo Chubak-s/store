@@ -5,6 +5,7 @@ import vHeader from "@/components/v-header.vue";
 import vFooter from "@/components/v-footer.vue";
 import vCart from "@/components/v-cart.vue";
 import vLiked from "@/components/v-liked.vue";
+import VLoginPage from "@/components/v-login-page.vue";
 const routes = [
     {
         path: '/',
@@ -31,6 +32,14 @@ const routes = [
             vFooter
         },
         props: true,
+    },
+    {
+        path: '/login',
+        components: {
+            default:VLoginPage,
+            vHeader,
+            vFooter
+        },
     },
     {
         path: '/liked',
