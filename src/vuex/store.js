@@ -5,6 +5,7 @@ const store = createStore({
         return {
             cart: [],
             liked: [],
+            isVisibleLogin: false,
         }
     },
     mutations:{

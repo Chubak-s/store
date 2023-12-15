@@ -7,11 +7,14 @@ export default {
   props: {},
   data(){
     return {
-
     }
   },
   computed:{},
-  methods: {},
+  methods: {
+    openLogin(){
+      this.$store.state.isVisibleLogin=true;
+    }
+  },
   watch: {},
   mounted() {
   }
@@ -30,7 +33,7 @@ export default {
       </div>
       <div class='registration'>
         <img src="/src/assets/ic_sharp-log-in.svg" alt="log-in">
-        <p class="log-in"><router-link to="/login" style="text-decoration: none; color: #969696">Войти/Регистрация</router-link></p>
+        <p class="log-in" @click="openLogin">Войти/Регистрация</p>
       </div>
     </div>
     <div class='bar'>

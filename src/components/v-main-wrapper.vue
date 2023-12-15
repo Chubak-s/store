@@ -1,20 +1,27 @@
 <script>
+import VLoginPage from "@/components/v-login-page.vue";
 export default {
   name: 'v-main-wrapper',
   components: {
-
+    VLoginPage,
   },
   props: {},
   data(){
     return {
-      title: 'Main wrapper'
+      title: 'Main wrapper',
+      isVisibleLogin: false,
     }
   },
-  computed:{
-
+  computed: {
+    isVisibleLogin: function() {
+      return this.$store.state.isVisibleLogin;
+    }
   },
   methods: {
-
+    closeLogin(){
+      this.isVisibleLogin = false;
+      this.$store.state.isVisibleLogin = this.isVisibleLogin;
+    }
   },
   watch: {
 
@@ -26,6 +33,10 @@ export default {
 
 <template>
   <div class="v-main-wrapper">
+    <div class="login" v-if="isVisibleLogin">
+      <VLoginPage></VLoginPage>
+      <i class="material-icons close closeLogin" @click="closeLogin()"></i>
+    </div>
     <div class="Jumbotron">
       <div class="logo_jumbotron">
         <div class="content">
@@ -274,5 +285,36 @@ export default {
 .brand-logo{
   width: 200px;
   height: 100px;
+}
+
+.close{
+  position: fixed;
+  top: 5vh;
+  right: 22vw;
+  color: #fff;
+  cursor: pointer;
+}
+.closeLogin{
+  position: fixed;
+  top: 23vh;
+  right: 30vw;
+  color: #fff;
+  cursor: pointer;
+}
+.popup-wrapper{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.login{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 </style>

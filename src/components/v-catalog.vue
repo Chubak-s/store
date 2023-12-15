@@ -2,12 +2,14 @@
 import VCard from "@/components/v-card.vue";
 import VPopup from "@/components/v-popup.vue";
 import VCart from "@/components/v-cart.vue";
+import VLoginPage from "@/components/v-login-page.vue";
 export default {
   name: 'v-catalog',
   components: {
     VCard,
     VPopup,
-    VCart
+    VCart,
+    VLoginPage,
   },
   props: {},
   data() {
@@ -25,9 +27,9 @@ export default {
         {name: 'Armani blue', img: '/src/assets/glasses/armani.png', price: 14000, category: 'glasses'},
         {name: 'Burberry fashion', img: '/src/assets/glasses/burberry.png', price: 56000, category: 'glasses'},
         {name: 'Ray-ben classic', img: '/src/assets/glasses/ray-ben.png', price: 18000, category: 'glasses'},
-        {name: 'DG blue', img: '/src/assets/watches/model1.png', price: 230000, category: 'watches'},
-        {name: 'DG red', img: '/src/assets/watches/model2.png', price: 220000, category: 'watches'},
-        {name: 'DG white', img: '/src/assets/watches/model3.png', price: 225000, category: 'watches'},
+        {name: 'wainer', img: '/src/assets/watches/wainer.png', price: 230000, category: 'watches'},
+        {name: 'casio', img: '/src/assets/watches/casio.png', price: 220000, category: 'watches'},
+        {name: 'U.S. Polo', img: '/src/assets/watches/US POLO.png', price: 225000, category: 'watches'},
       ],
       belts: [],
       bracelets: [],
@@ -42,11 +44,16 @@ export default {
       watchesShow: false,
       actualCatalog: null,
       isVisibleModal: false,
+      isVisibleLogin: false,
       actualItem: {},
       cart: [],
     }
   },
-  computed: {},
+  computed: {
+    isVisibleLogin: function() {
+      return this.$store.state.isVisibleLogin;
+    }
+  },
   methods: {
     sortPrice(){
       this.catalog.sort((a, b) => a.price - b.price);
@@ -67,9 +74,14 @@ export default {
     },
     closeModal(){
       this.isVisibleModal = false;
+    },
+    closeLogin(){
+      this.isVisibleLogin = false;
+      this.$store.state.isVisibleLogin = this.isVisibleLogin;
     }
   },
-  watch: {},
+  watch: {
+  },
   mounted() {
     this.actualCatalog = this.catalog;
     this.catalog.forEach(element => {
@@ -133,6 +145,10 @@ export default {
         <div class="popup-wrapper" v-if="isVisibleModal">
           <VPopup :item="this.actualItem"></VPopup>
           <i class="material-icons close" @click="closeModal()"></i>
+        </div>
+        <div class="login" v-if="isVisibleLogin">
+          <VLoginPage></VLoginPage>
+          <i class="material-icons close closeLogin" @click="closeLogin()"></i>
         </div>
       </div>
     </div>
@@ -222,12 +238,27 @@ export default {
   color: #fff;
   cursor: pointer;
 }
+.closeLogin{
+  position: fixed;
+  top: 20vh;
+  right: 30vw;
+  color: #fff;
+  cursor: pointer;
+}
 .popup-wrapper{
   position: fixed;
   top:0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.login{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 </style>
