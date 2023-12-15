@@ -296,7 +296,7 @@ export default {
 }
 .closeLogin{
   position: fixed;
-  top: 23vh;
+  top: 20vh;
   right: 30vw;
   color: #fff;
   cursor: pointer;
