@@ -1,8 +1,12 @@
 <script>
 import VCardCart from "@/components/v-card-cart.vue";
+import VLoginPage from "@/components/v-login-page.vue";
 export default {
   name: 'v-cart',
-  components: {VCardCart},
+  components: {
+    VCardCart,
+    VLoginPage,
+  },
   data(){
     return{
       cart: [],
@@ -11,9 +15,14 @@ export default {
       deliveryCost: 500,
       counter: {},
       uniqueCart: [],
+      isVisibleLogin: false,
     }
   },
   methods:{
+    closeLogin(){
+      this.isVisibleLogin = false;
+      this.$store.state.isVisibleLogin = this.isVisibleLogin;
+    }
   },
   computed:{
     summa: function (){
@@ -22,6 +31,9 @@ export default {
         this.sum += this.cart[item].price;
       }
       return this.sum;
+    },
+    isVisibleLogin: function() {
+      return this.$store.state.isVisibleLogin;
     }
   },
   mounted() {
@@ -44,6 +56,10 @@ export default {
 
 <template>
   <div class="v-cart">
+    <div class="login" v-if="isVisibleLogin">
+      <VLoginPage></VLoginPage>
+      <i class="material-icons close closeLogin" @click="closeLogin()"></i>
+    </div>
     <div class="main-bar">
       <router-link to="/" style="text-decoration: none; color: #FFFFFF"><div class="path hover">Главное/Корзина</div></router-link>
       <div class="sort-bar">
@@ -177,5 +193,27 @@ export default {
 }
 .makeOrder:active{
   background: #191B1C;
+}
+.login{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.closeLogin{
+  position: fixed;
+  top: 20vh;
+  right: 30vw;
+  color: #fff;
+  cursor: pointer;
+}
+.close{
+  position: fixed;
+  top: 5vh;
+  right: 22vw;
+  color: #fff;
+  cursor: pointer;
 }
 </style>

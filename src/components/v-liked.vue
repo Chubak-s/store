@@ -1,9 +1,11 @@
 <script>
 import VCard from "@/components/v-card.vue";
 import VPopup from "@/components/v-popup.vue";
+import VLoginPage from "@/components/v-login-page.vue";
 export default {
   name: 'v-liked',
   components: {
+    VLoginPage,
     VCard,
     VPopup,
   },
@@ -13,9 +15,14 @@ export default {
       liked: [],
       isVisibleModal: false,
       actualItem: {},
+      isVisibleLogin: false,
     }
   },
-  computed: {},
+  computed: {
+    isVisibleLogin: function() {
+      return this.$store.state.isVisibleLogin;
+    }
+  },
   methods: {
     openModal(item){
       this.isVisibleModal = true;
@@ -24,6 +31,10 @@ export default {
     closeModal(){
       this.isVisibleModal = false;
     },
+    closeLogin(){
+      this.isVisibleLogin = false;
+      this.$store.state.isVisibleLogin = this.isVisibleLogin;
+    }
   },
   watch: {},
   mounted() {
@@ -55,6 +66,10 @@ export default {
           <i class="material-icons close" @click="closeModal()"></i>
         </div>
       </div>
+    </div>
+    <div class="login" v-if="isVisibleLogin">
+      <VLoginPage></VLoginPage>
+      <i class="material-icons close closeLogin" @click="closeLogin()"></i>
     </div>
   </div>
 </template>
@@ -116,5 +131,27 @@ export default {
   font-family: "PT Sans", sans-serif;
   width: 100vw;
   margin-bottom: 50px;
+}
+.login{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.closeLogin{
+  position: fixed;
+  top: 20vh;
+  right: 30vw;
+  color: #fff;
+  cursor: pointer;
+}
+.close{
+  position: fixed;
+  top: 5vh;
+  right: 22vw;
+  color: #fff;
+  cursor: pointer;
 }
 </style>
