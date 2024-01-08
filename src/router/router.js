@@ -8,7 +8,7 @@ import vLiked from "@/components/v-liked.vue";
 import VLoginPage from "@/components/v-login-page.vue";
 const routes = [
     {
-        path: '/',
+        path: '/store',
         components: {
             default: vMainWrapper,
             vHeader,
