@@ -38,7 +38,7 @@ export default {
     </div>
     <div class='bar'>
       <div class="logo">
-        <router-link to="/" style="text-decoration: none; color: #fff">PORTEN</router-link>
+        <router-link to="/store" style="text-decoration: none; color: #fff">PORTEN</router-link>
       </div>
       <div class="menu-bar">
         <router-link to="/catalog" style="text-decoration: none; color: #969696"><p class="block-bar">каталог</p></router-link>

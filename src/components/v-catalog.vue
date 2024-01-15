@@ -15,9 +15,9 @@ export default {
   data() {
     return {
       catalog: [
-        {name: 'Phillip Plein black', img: '/src/assets/bracelets/phillip-plein.png', price: 34800, category: 'bracelets', information: 'Состав Гипоаллергенная нержавеющая сталь - 100%; Сезон мульти; Цвет черный; Застежка на замке; Страна производства Китай'},
-        {name: 'Phillip Plein grey', img: '/src/assets/bracelets/pp-white.png', price: 34800, category: 'bracelets', information: 'Состав Гипоаллергенная нержавеющая сталь - 100%; Сезон мульти; Цвет серый; Застежка на замке; Страна производства Китай'},
-        {name: 'Phillip Plein Golden', img: '/src/assets/bracelets/pp-golden.png', price: 34800, category: 'bracelets', information: 'Состав Материал 1: Нержавеющая сталь - 100%; Материал 2: Кристаллы - 100%; Ширина 1.2 см; Длина 22 см; Сезон мульти; Цвет золотой; Застежка на замке; Страна производства Китай'},
+        {name: 'Phillip Plein black', img: 'src/assets/bracelets/phillip-plein.png', price: 34800, category: 'bracelets', information: 'Состав Гипоаллергенная нержавеющая сталь - 100%; Сезон мульти; Цвет черный; Застежка на замке; Страна производства Китай'},
+        {name: 'Phillip Plein grey', img: 'src/assets/bracelets/pp-white.png', price: 34800, category: 'bracelets', information: 'Состав Гипоаллергенная нержавеющая сталь - 100%; Сезон мульти; Цвет серый; Застежка на замке; Страна производства Китай'},
+        {name: 'Phillip Plein Golden', img: 'src/assets/bracelets/pp-golden.png', price: 34800, category: 'bracelets', information: 'Состав Материал 1: Нержавеющая сталь - 100%; Материал 2: Кристаллы - 100%; Ширина 1.2 см; Длина 22 см; Сезон мульти; Цвет золотой; Застежка на замке; Страна производства Китай'},
         {name: 'Harmont Blaine', img: '/src/assets/belts/harmont-blaine.png', price: 9000, category: 'belts', information: 'Состав  Натуральная кожа - 100%; Ширина  3 см; Сезон  мульти; Цвет  сний; Узор  однотонный; Цвет фурнитуры  серебряный; Страна производства  Италия'},
         {name: 'Hugo', img: '/src/assets/belts/hugo.png', price: 8000, category: 'belts', information: 'Состав  Натуральная кожа - 100%; Ширина  3 см; Сезон  мульти; Цвет  черный; Узор  однотонный; Цвет фурнитуры  серебряный; Страна производства  Италия'},
         {name: 'Etro', img: '/src/assets/belts/etro.png', price: 34000, category: 'belts', information: 'Состав  ПВХ - 100%; Ширина  3.5 см; Сезон  мульти; Цвет  коричневый; Узор  однотонный; Цвет фурнитуры  серебряный; Страна производства  Италия'},
