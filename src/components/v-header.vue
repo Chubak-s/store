@@ -42,10 +42,10 @@ export default {
       </div>
       <div class="menu-bar">
         <router-link to="/store/catalog" style="text-decoration: none; color: #969696"><p class="block-bar">каталог</p></router-link>
-        <router-link to="/liked" style="text-decoration: none; color: #969696"><p class="block-bar">понравилось</p></router-link>
+        <router-link to="/store/liked" style="text-decoration: none; color: #969696"><p class="block-bar">понравилось</p></router-link>
         <p class="block-bar">личный кабинет</p>
         <button type="button" class="cart-btn">
-          <router-link to="/cart"><img src="/src/assets/bx_bx-cart.svg" alt="cart"></router-link>
+          <router-link to="/store/cart"><img src="/src/assets/bx_bx-cart.svg" alt="cart"></router-link>
         </button>
       </div>
     </div>

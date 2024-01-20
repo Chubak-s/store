@@ -25,7 +25,7 @@ const routes = [
         props: true,
     },
     {
-        path: '/cart',
+        path: '/store/cart',
         components: {
             default: vCart,
             vHeader,
@@ -34,7 +34,7 @@ const routes = [
         props: true,
     },
     {
-        path: '/login',
+        path: '/store/login',
         components: {
             default:VLoginPage,
             vHeader,
@@ -42,7 +42,7 @@ const routes = [
         },
     },
     {
-        path: '/liked',
+        path: '/store/liked',
         components: {
             default: vLiked,
             vHeader,
