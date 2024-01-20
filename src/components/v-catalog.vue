@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       catalog: [
-        {name: 'Phillip Plein black', img: "/src/assets/bracelets/phillip-plein.png", price: 34800, category: 'bracelets', information: 'Состав Гипоаллергенная нержавеющая сталь - 100%; Сезон мульти; Цвет черный; Застежка на замке; Страна производства Китай'},
+        {name: 'Phillip Plein black', img: "https://github.com/Chubak-s/store/blob/main/src/assets/bracelets/phillip-plein.png?raw=true", price: 34800, category: 'bracelets', information: 'Состав Гипоаллергенная нержавеющая сталь - 100%; Сезон мульти; Цвет черный; Застежка на замке; Страна производства Китай'},
         {name: 'Phillip Plein grey', img: '/src/assets/bracelets/pp-white.png', price: 34800, category: 'bracelets', information: 'Состав Гипоаллергенная нержавеющая сталь - 100%; Сезон мульти; Цвет серый; Застежка на замке; Страна производства Китай'},
         {name: 'Phillip Plein Golden', img: '/src/assets/bracelets/pp-golden.png', price: 34800, category: 'bracelets', information: 'Состав Материал 1: Нержавеющая сталь - 100%; Материал 2: Кристаллы - 100%; Ширина 1.2 см; Длина 22 см; Сезон мульти; Цвет золотой; Застежка на замке; Страна производства Китай'},
         {name: 'Harmont Blaine', img: '/src/assets/harmont-blaine.png', price: 9000, category: 'belts', information: 'Состав  Натуральная кожа - 100%; Ширина  3 см; Сезон  мульти; Цвет  сний; Узор  однотонный; Цвет фурнитуры  серебряный; Страна производства  Италия'},
