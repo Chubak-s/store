@@ -16,7 +16,7 @@ const routes = [
         }
     },
     {
-        path: '/catalog',
+        path: '/store/catalog',
         components: {
             default: vCatalog,
             vHeader,
