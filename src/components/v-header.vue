@@ -41,7 +41,7 @@ export default {
         <router-link to="/store" style="text-decoration: none; color: #fff">PORTEN</router-link>
       </div>
       <div class="menu-bar">
-        <router-link to="/catalog" style="text-decoration: none; color: #969696"><p class="block-bar">каталог</p></router-link>
+        <router-link to="/store/catalog" style="text-decoration: none; color: #969696"><p class="block-bar">каталог</p></router-link>
         <router-link to="/liked" style="text-decoration: none; color: #969696"><p class="block-bar">понравилось</p></router-link>
         <p class="block-bar">личный кабинет</p>
         <button type="button" class="cart-btn">
