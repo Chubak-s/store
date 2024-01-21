@@ -46,12 +46,7 @@ export default {
 <template>
   <div class="v-liked">
     <div class="main-bar">
-      <div class="path hover"><router-link to="/" style="text-decoration: none; color: #FFF">Главное/ Избранное</router-link></div>
-      <div class="sort-bar">
-        <div class="sort-new hover">по новизне</div>
-        <div class="sort-price hover">по цене</div>
-        <div class="sort-popular hover">по популярности</div>
-      </div>
+      <div class="path hover"><router-link to="/store" style="text-decoration: none; color: #FFF">Главное/ Избранное</router-link></div>
     </div>
     <div class="main-section">
       <div v-if="this.liked.length===0">
@@ -82,6 +77,7 @@ export default {
   background-color: #0F0F0F;
   padding-right: 10vw;
   padding-left: 10vw;
+  padding-bottom: 40px;
 }
 .main-bar{
   height: 20vh;
@@ -91,19 +87,16 @@ export default {
   color: #FFFFFF;
   font-size: 16px;
 }
-.sort-bar{
-  display: flex;
-  column-gap: 30px;
-}
 .main-section{
   display: flex;
+  height: 50vh;
 }
 
 .main-catalog{
   display: flex;
   flex-wrap: wrap;
   column-gap: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   width: 70vw;
   gap: 20px;
 }
@@ -130,7 +123,7 @@ export default {
   font-size: 48px;
   font-family: "PT Sans", sans-serif;
   width: 100vw;
-  margin-bottom: 50px;
+  padding-left: 20vw;
 }
 .login{
   position: fixed;
@@ -144,13 +137,6 @@ export default {
   position: fixed;
   top: 20vh;
   right: 30vw;
-  color: #fff;
-  cursor: pointer;
-}
-.close{
-  position: fixed;
-  top: 5vh;
-  right: 22vw;
   color: #fff;
   cursor: pointer;
 }

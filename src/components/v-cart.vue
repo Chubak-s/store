@@ -61,12 +61,7 @@ export default {
       <i class="material-icons close closeLogin" @click="closeLogin()"></i>
     </div>
     <div class="main-bar">
-      <router-link to="/" style="text-decoration: none; color: #FFFFFF"><div class="path hover">Главное/Корзина</div></router-link>
-      <div class="sort-bar">
-        <div class="sort-new hover">по новизне</div>
-        <div class="sort-price hover">по цене</div>
-        <div class="sort-popular hover">по популярности</div>
-      </div>
+      <router-link to="/store" style="text-decoration: none; color: #FFFFFF"><div class="path hover">Главное/Корзина</div></router-link>
     </div>
     <div class="main-section">
       <div class="items">
@@ -113,10 +108,6 @@ export default {
   padding-left: 10vw;
   color: #FFFFFF;
   font-size: 16px;
-}
-.sort-bar{
-  display: flex;
-  column-gap: 30px;
 }
 .main-section{
   display: flex;
@@ -202,17 +193,10 @@ export default {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
 }
-.closeLogin{
+.closeLogin {
   position: fixed;
   top: 20vh;
   right: 30vw;
-  color: #fff;
-  cursor: pointer;
-}
-.close{
-  position: fixed;
-  top: 5vh;
-  right: 22vw;
   color: #fff;
   cursor: pointer;
 }

@@ -37,16 +37,14 @@ export default {
       glasses: [],
       watches: [],
       showCategories: false,
-      beltsShow: false,
-      braceletsShow: false,
-      bugsShow: false,
-      glassesShow: false,
-      watchesShow: false,
+      PriceSetting: false,
       actualCatalog: null,
       isVisibleModal: false,
       isVisibleLogin: false,
       actualItem: {},
       cart: [],
+      fromPrice: 0,
+      toPrice: 10000000,
     }
   },
   computed: {
@@ -55,8 +53,22 @@ export default {
     }
   },
   methods: {
-    sortPrice(){
-      this.catalog.sort((a, b) => a.price - b.price);
+    sortPriceUp(){
+      this.actualCatalog.sort((a, b) => a.price - b.price);
+    },sortPriceDown(){
+      this.actualCatalog.sort((a, b) => b.price - a.price);
+    },
+    defaultCatalog(){
+      this.actualCatalog.sort((a,b) => {
+        const aNAME = a.name.toUpperCase();
+        const bNAME = b.name.toUpperCase();
+        if (aNAME>bNAME){
+          return 1;
+        } else if (aNAME<bNAME){
+          return -1;
+        }
+        return 0;
+      })
     },
     ChooseCategory(category){
       this.actualCatalog = category;
@@ -65,6 +77,9 @@ export default {
       switch (itemShow){
         case 'categories':
           this.showCategories = !this.showCategories;
+          break;
+        case 'price':
+          this.PriceSetting = !this.PriceSetting;
           break;
       }
     },
@@ -78,7 +93,20 @@ export default {
     closeLogin(){
       this.isVisibleLogin = false;
       this.$store.state.isVisibleLogin = this.isVisibleLogin;
-    }
+    },
+    setPrice(){
+      this.fromPriceInput = document.querySelector('.price-block[name=fromPrice]');
+      this.toPriceInput = document.querySelector('.price-block[name=toPrice]');
+      let newCatalog = [];
+      this.actualCatalog.forEach(element => {
+        if (element.price >= this.fromPriceInput.value && element.price <= this.toPriceInput.value) {
+          newCatalog.push(element);
+        }
+      });
+      this.actualCatalog = newCatalog;
+      console.log(this.fromPriceInput);
+      console.log(this.toPriceInput)
+    },
   },
   watch: {
   },
@@ -112,9 +140,9 @@ export default {
     <div class="main-bar">
       <div class="path hover"><router-link to="/store" style="text-decoration: none; color: #FFF">Главное/ Каталог</router-link></div>
       <div class="sort-bar">
-        <div class="sort-new hover">по новизне</div>
-        <div class="sort-price hover" @click="sortPrice">по цене</div>
-        <div class="sort-popular hover">по популярности</div>
+        <div class="sort-price-down hover" @click="sortPriceDown">по убыванию цен</div>
+        <div class="sort-price-up hover" @click="sortPriceUp">по возрастанию цен</div>
+        <div class="sort-popular hover" @click="defaultCatalog">по популярности</div>
       </div>
     </div>
     <div class="main-section">
@@ -129,14 +157,14 @@ export default {
           <li class="list" @click="ChooseCategory(this.catalog)">все</li>
         </ul>
         <hr class="line">
-        <div class="categories-title" @click="toggleSubItems('categories')">Фильтр</div>
-        <ul class="categories-items" :class="{ 'show': this.showCategories }">
-          <li class="list" @click="ChooseCategory(this.watches)">часы</li>
-          <li class="list" @click="ChooseCategory(this.belts)">ремни</li>
-          <li class="list" @click="ChooseCategory(this.bugs)">рюкзаки</li>
-          <li class="list" @click="ChooseCategory(this.bracelets)">браслеты</li>
-          <li class="list" @click="ChooseCategory(this.glasses)">очки</li>
-        </ul>
+        <div class="categories-title" @click="toggleSubItems('price')">Цена</div>
+        <div class="categories-items" :class="{'show': this.PriceSetting}">
+          <div class="prices">
+            от<input type="number" name="fromPrice" step="0.01" min="0" required class="price-block">
+            до<input type="number" name="toPrice" step="0.01" min="0" required class="price-block">
+          </div>
+          <button type="submit" class="save" @click="setPrice">Сохранить</button>
+        </div>
       </div>
       <div class="main-catalog">
         <div v-for="item in actualCatalog" :key="item.id">
@@ -209,7 +237,7 @@ export default {
 }
 .line{
   margin: 0 auto;
-  width: 60%;
+  width: 80%;
   margin-bottom: 45px;
 }
 .main-catalog{
@@ -260,5 +288,29 @@ export default {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
+}
+.prices{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 14px;
+  color: #FFFFFF;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  cursor: pointer;
+}
+.price-block{
+  width: 30%;
+}
+.save{
+  margin-top: 15px;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 5px;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  cursor: pointer;
 }
 </style>
